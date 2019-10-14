@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 import './profile-card.scss';
+import FooterLinks from '../footer-links/footer-links';
 
 // Store here all paths for which this component should be visible
 const visiblePaths = ['/'];
@@ -14,13 +15,17 @@ const ProfileCard = (props) => {
   }
 
   return (
-    <div className="card">
-      <div className="profile_image"></div>
-      <h4>Andrei Dogaru</h4>
-      <p>Senior Web Developer</p>
-      <button className="secondary_button">
-        <p>View Profile</p>
-      </button>
+    <div className="profile_card_container">
+      <div className="card">
+        <div className="profile_image"></div>
+        <h4>Andrei Dogaru</h4>
+        <p>Senior Web Developer</p>
+        <button className="secondary_button">
+          <p>View Profile</p>
+        </button>
+      </div>
+
+      <FooterLinks />
     </div>
   );
 };

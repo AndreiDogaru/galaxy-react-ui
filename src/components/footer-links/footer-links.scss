@@ -1,0 +1,26 @@
+.footer_links {
+  margin-top: 10px;
+
+  p {
+    font-size: 14px;
+    float:left;
+    cursor: pointer;
+
+    &:first-child {
+      float: left;
+    }
+
+    &:nth-child(2) {
+      float: right;
+    }
+
+    &:last-child {
+      clear: both;
+      line-height: 24px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

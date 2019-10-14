@@ -5,9 +5,6 @@
   flex-direction: column;
   align-items: center;
   padding: 5px 30px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #fff;
 
   &.active {
     background-color: $color-light-blue;
