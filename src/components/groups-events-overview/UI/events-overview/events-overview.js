@@ -28,7 +28,7 @@ const EventsOverview = () => {
   return (
     <div className="card events_card">
       <div className="card_header">
-        <Icon.Calendar />
+        <Icon.Calendar color="#fff" />
         <p>Upcoming Events</p>
       </div>
 

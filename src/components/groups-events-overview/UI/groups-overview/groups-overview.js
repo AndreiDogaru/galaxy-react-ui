@@ -26,14 +26,14 @@ const GroupsOverview = () => {
   return (
     <div className="card groups_card" style={{ maxHeight: maxHeight + 'px' }}>
       <div className="card_header">
-        <Icon.Grid />
+        <Icon.Grid color="#fff" />
         <p>Your Groups</p>
       </div>
 
       <div className="card_body">
         {groups.map((item) => (
           <div key={item.id} className="group_overview_item">
-            <Icon.Grid />
+            <Icon.Grid size={35} />
             <div className="group_overview_item-right_side">
               <p>{item.title}</p>
               <p className="group_overview_item-right_side-users">

@@ -3,6 +3,7 @@ import * as Icon from 'react-feather';
 
 import './header.scss';
 import HeaderLink from './UI/link/link';
+import ProfileIcon from '../UI/profile-icon/profile-icon';
 
 const Header = () => {
   return (
@@ -51,7 +52,7 @@ const Header = () => {
             route="notifications"
           />
 
-          <div className="header_profile_icon"></div>
+          <ProfileIcon style={{ marginLeft: '20px' }} />
         </div>
       </div>
     </div>

@@ -8,7 +8,6 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    color: #fff;
     background-color: $color-dark-blue;
     padding: 15px 0;
 
@@ -29,13 +28,9 @@
       color: $color-grey;
       margin: 20px 10% 0 10%;
 
-      svg {
-        width: 35px;
-        height: 35px;
-        margin-right: 10px;
-      }
-
       .group_overview_item-right_side {
+        margin-left: 10px;
+
         p {
           color: $color-grey;
           width: fit-content;
