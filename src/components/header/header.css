@@ -1,0 +1,56 @@
+.header_container {
+  width: 100%;
+  background-color: #062450;
+}
+
+.content {
+  max-width: 1195px;
+  height: 100%;
+  margin: 0 auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  width: 250px;
+  height: 100%;
+  padding: 5px 0;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 550px;
+  margin: 0 30px;
+}
+
+.right {
+  width: 335px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 30px;
+  cursor: pointer;
+}
+
+.link.active {
+  background-color: #0075FF;
+}
+
+.right .profile {
+  background-image: url('../../assets/images/andrei-bw.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
