@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import './groups-events-overview.scss';
 import GroupsOverview from './UI/groups-overview/groups-overview';
+import EventsOverview from './UI/events-overview/events-overview';
 
 const GroupsEventsOverview = () => {
   const [leftPosition, setLeftPosition] = useState(0);
@@ -17,6 +18,7 @@ const GroupsEventsOverview = () => {
   return (
     <div className="groups_events_container" style={{ left: leftPosition + 'px' }}>
       <GroupsOverview />
+      <EventsOverview />
     </div>
   );
 };

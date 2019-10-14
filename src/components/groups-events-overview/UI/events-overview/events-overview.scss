@@ -1,0 +1,85 @@
+@import '../../../../styles/colors';
+
+.events_card {
+  width: 335px;
+  max-height: 40vh;
+  margin-top: 20px;
+
+  .card_header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: $color-dark-blue;
+    padding: 15px 0;
+
+    p {
+      margin-left: 5px;
+      color: #fff;
+    }
+  }
+
+  .card_body {
+    text-align: center;
+    width: 100%;
+    overflow: auto;
+
+    .event_overview_item {
+      margin-top: 20px;
+      
+      .event_overview_item-content {
+        display: flex;
+        flex-direction: column;
+        border-left: 8px solid $color-light-purple;
+        padding: 10px 25px 10px 15px;
+
+        .event_overview_item-date {
+          text-align: left;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+
+        .event_overview_item-row {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 5px;
+
+          p {
+            font-size: 14px;
+
+            &.focused {
+              color: $color-light-purple;
+            }
+
+            &.clickable {
+              cursor: pointer;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+      }
+
+      hr {
+        height: 1px;
+        margin: 10px 25px 0;
+        background-color: $color-disabled;
+      }
+
+      &:last-child {
+        hr {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .card_footer {
+    padding-bottom: 20px;
+    margin-top: 30px;
+  }
+}

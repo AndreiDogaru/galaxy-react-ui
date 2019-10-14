@@ -11,7 +11,7 @@ const groups = [
 
 const GroupsOverview = () => {
   return (
-    <div className={"card groups_card"}>
+    <div className="card groups_card">
       <div className="card_header">
         <Icon.Grid />
         <p>Your Groups</p>
@@ -29,7 +29,9 @@ const GroupsOverview = () => {
             </div>
           </div>
         ))}
+      </div>
 
+      <div className="card_footer">
         <button className="secondary_button">
           <p>Browse Groups</p>
         </button>

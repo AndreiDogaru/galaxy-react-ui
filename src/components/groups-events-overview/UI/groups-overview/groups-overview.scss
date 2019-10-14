@@ -2,6 +2,7 @@
 
 .groups_card {
   width: 335px;
+  max-height: 40vh;
 
   .card_header {
     display: flex;
@@ -19,14 +20,15 @@
   }
 
   .card_body {
-    padding-bottom: 20px;
     text-align: center;
+    overflow: auto;
+    width: 100%;
 
     .group_overview_item {
       display: flex;
       align-items: center;
       color: $color-grey;
-      margin-top: 20px;
+      margin: 20px 10% 0 10%;
 
       svg {
         width: 35px;
@@ -55,9 +57,10 @@
         }
       }
     }
+  }
 
-    .secondary_button {
-      margin-top: 30px;
-    }
+  .card_footer {
+    padding-bottom: 20px;
+    margin-top: 30px;
   }
 }
