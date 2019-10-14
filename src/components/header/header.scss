@@ -34,7 +34,7 @@
     .right {
       width: 335px;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
 
       .header_profile_icon {
@@ -46,6 +46,7 @@
         height: 40px;
         border-radius: 50px;
         cursor: pointer;
+        margin-left: 20px;
       }
     }
   }
