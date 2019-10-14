@@ -1,9 +1,26 @@
+@import './styles/_colors';
+@import './styles/_card';
+@import './styles/_button';
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
   outline: none;
   border: none;
   -webkit-overflow-scrolling: touch;
+}
+
+body {
+  background-color: $color-background;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-family: 'Lato', sans-serif;
+  color: $color-grey;
 }

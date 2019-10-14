@@ -9,14 +9,17 @@ import {
 import './App.scss';
 import Header from '../components/header/header';
 import Home from '../pages/home/home';
+import ProfileCard from '../components/profile-card/profile-card';
 
-function App() {
+const App = (props) => {
   return (
     <div className="page_container">
       <BrowserRouter>
         <Header />
 
-        <div className="page">
+        <div className="page_content">
+          <ProfileCard />
+          
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/groups" component={() => <p>Groups</p>} />

@@ -4,7 +4,23 @@ import './home.scss';
 
 const Home = () => {
   return (
-    <p>Home !!</p>
+    <div className="home">
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+      <p>Home !!</p>
+    </div>
   );
 };
 

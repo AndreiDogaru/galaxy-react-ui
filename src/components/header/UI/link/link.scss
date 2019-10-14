@@ -1,7 +1,4 @@
-a {
-  color: white;
-  text-decoration: none;
-}
+@import '../../../../styles/_colors';
 
 .link {
   display: flex;
@@ -9,8 +6,15 @@ a {
   align-items: center;
   padding: 5px 30px;
   cursor: pointer;
-}
+  text-decoration: none;
+  color: #fff;
 
-.link.active {
-  background-color: #0075FF;
+  &.active {
+    background-color: $color-light-blue;
+  }
+
+  p {
+    font-family: 'Source Sans Pro';
+    color: #fff;
+  }
 }

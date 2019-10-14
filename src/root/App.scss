@@ -1,10 +1,11 @@
 .page_container {
   width: 100vw;
   height: 100vh;
-  background-color: #F4F5F9;
-}
-
-.page {
-  max-width: 1195px;
-  margin: 20px auto 0;
+  overflow: auto;
+  
+  .page_content {
+    max-width: 1195px;
+    margin: 80px auto 0;
+    display: flex;
+  }
 }
