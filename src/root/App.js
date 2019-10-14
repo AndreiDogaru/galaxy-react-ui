@@ -10,8 +10,9 @@ import './App.scss';
 import Header from '../components/header/header';
 import Home from '../pages/home/home';
 import ProfileCard from '../components/profile-card/profile-card';
+import GroupsEventsOverview from '../components/groups-events-overview/groups-events-overview';
 
-const App = (props) => {
+const App = () => {
   return (
     <div className="page_container">
       <BrowserRouter>
@@ -29,6 +30,8 @@ const App = (props) => {
             <Route path="/notifications" component={() => <p>Notifications</p>} />
             <Redirect from='*' to='/' />
           </Switch>
+
+          <GroupsEventsOverview />
         </div>
       </BrowserRouter>
     </div>

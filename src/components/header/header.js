@@ -51,7 +51,7 @@ const Header = () => {
             route="notifications"
           />
 
-          <div className="profile"></div>
+          <div className="header_profile_icon"></div>
         </div>
       </div>
     </div>

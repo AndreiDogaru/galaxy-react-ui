@@ -1,0 +1,63 @@
+@import '../../../../styles/colors';
+
+.groups_card {
+  width: 335px;
+
+  .card_header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: $color-dark-blue;
+    padding: 15px 0;
+
+    p {
+      margin-left: 5px;
+      color: #fff;
+    }
+  }
+
+  .card_body {
+    padding-bottom: 20px;
+    text-align: center;
+
+    .group_overview_item {
+      display: flex;
+      align-items: center;
+      color: $color-grey;
+      margin-top: 20px;
+
+      svg {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+      }
+
+      .group_overview_item-right_side {
+        p {
+          color: $color-grey;
+          width: fit-content;
+          
+          &:not(.group_overview_item-right_side-users) {
+            cursor: pointer;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          &.group_overview_item-right_side-users {
+            color: $color-light-purple;
+            font-size: 14px;
+            margin-top: 2px;
+          } 
+        }
+      }
+    }
+
+    .secondary_button {
+      margin-top: 30px;
+    }
+  }
+}

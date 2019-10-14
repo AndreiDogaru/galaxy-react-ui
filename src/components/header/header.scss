@@ -3,6 +3,7 @@
 .header_container {
   position: fixed;
   top: 0;
+  z-index: 1;
   width: 100%;
   background-color: $color-dark-blue;
 
@@ -36,7 +37,7 @@
       justify-content: space-between;
       align-items: center;
 
-      .profile {
+      .header_profile_icon {
         background-image: url('../../assets/images/andrei-bw.jpg');
         background-position: center;
         background-repeat: no-repeat;

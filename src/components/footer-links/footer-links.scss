@@ -6,10 +6,6 @@
     float:left;
     cursor: pointer;
 
-    &:first-child {
-      float: left;
-    }
-
     &:nth-child(2) {
       float: right;
     }
