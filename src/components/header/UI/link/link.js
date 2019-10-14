@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import './link.css';
+import './link.scss';
 
 const HeaderLink = (props) => {
   return (

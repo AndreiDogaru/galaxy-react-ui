@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Icon from 'react-feather';
 
-import './header.css';
+import './header.scss';
 import HeaderLink from './UI/link/link';
 
 const Header = () => {
