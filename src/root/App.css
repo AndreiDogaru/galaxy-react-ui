@@ -1,7 +1,10 @@
 .page_container {
-  /* max-width: 1555px; */
   width: 100vw;
   height: 100vh;
-  margin: 0 auto;
   background-color: #F4F5F9;
+}
+
+.page {
+  max-width: 1195px;
+  margin: 20px auto 0;
 }

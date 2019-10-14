@@ -16,25 +16,25 @@ const Header = () => {
           <HeaderLink
             title="Home"
             icon={<Icon.Home />}
-            isActive={true}
+            route=""
           />
           
           <HeaderLink
             title="Groups"
             icon={<Icon.Grid />}
-            isActive={false}
+            route="groups"
           />
 
           <HeaderLink
             title="Calendar"
             icon={<Icon.Calendar />}
-            isActive={false}
+            route="calendar"
           />
           
           <HeaderLink
             title="Users"
             icon={<Icon.Users />}
-            isActive={false}
+            route="users"
           />
         </div>
 
@@ -42,13 +42,13 @@ const Header = () => {
           <HeaderLink
             title="Messages"
             icon={<Icon.MessageSquare />}
-            isActive={false}
+            route="messages"
           />
 
           <HeaderLink
             title="Notifications"
             icon={<Icon.Bell />}
-            isActive={false}
+            route="notifications"
           />
 
           <div className="profile"></div>

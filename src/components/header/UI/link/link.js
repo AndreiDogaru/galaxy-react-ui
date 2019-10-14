@@ -1,14 +1,20 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import './link.css';
 
-const Link = (props) => {
+const HeaderLink = (props) => {
   return (
-    <div className={`link ${props.isActive ? 'active' : ''}`}>
+    <NavLink 
+      className="link"
+      exact
+      to={props.route}
+      activeClassName="active"
+    >
       {props.icon}
       <p>{props.title}</p>
-    </div>
+    </NavLink>
   );
 };
 
-export default Link;
+export default HeaderLink;
