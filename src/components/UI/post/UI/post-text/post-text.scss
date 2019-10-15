@@ -1,5 +1,17 @@
-.post_text {
-  font-size: 14px;
+@import '../../../../../styles/colors';
+
+.post_text_container {
   padding: 0 25px 15px;
-  white-space: pre-line;
+
+  .post_text {
+    font-size: 14px;
+    white-space: pre-line;
+  }
+
+  span {
+    cursor: pointer;
+    color: $color-dark-blue;
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+  }
 }
