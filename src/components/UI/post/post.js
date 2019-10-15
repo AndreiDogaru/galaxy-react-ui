@@ -3,6 +3,7 @@ import * as Icon from 'react-feather';
 
 import './post.scss';
 import ProfileIcon from '../profile-icon/profile-icon';
+import PostImages from './UI/post-images/post-images';
 
 const Post = (props) => {
   const [isLiked, setIsLiked] = useState(false);
@@ -30,6 +31,10 @@ const Post = (props) => {
       </div>
 
       <p className="post_text">{props.data.text}</p>
+
+      {props.data.images && props.data.images.length > 0 && (
+        <PostImages data={props.data.images} />
+      )}
 
       <div className="post_statistics">
         <p>8 Likes</p>

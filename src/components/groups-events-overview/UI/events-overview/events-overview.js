@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import * as Icon from 'react-feather';
 
 import './events-overview.scss';
@@ -25,8 +25,21 @@ const events = [
 ];
 
 const EventsOverview = () => {
+  const [maxHeight, setMaxHeight] = useState(400);
+
+  const updateDimensionsHandler = () => {
+    // set maxHeight for this element to window height - 100px ( that's header heaight + margin top/bottom )
+    setMaxHeight(window.innerHeight - 100);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateDimensionsHandler);
+    updateDimensionsHandler();
+    return () => window.removeEventListener('resize', updateDimensionsHandler);
+  }, []);
+
   return (
-    <div className="card events_card">
+    <div className="card events_card" style={{ maxHeight: maxHeight + 'px' }}>
       <div className="card_header">
         <Icon.Calendar color="#fff" />
         <p>Upcoming Events</p>

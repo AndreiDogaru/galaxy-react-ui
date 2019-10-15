@@ -6,7 +6,8 @@
   align-items: center;
   padding: 5px 30px;
 
-  &.active {
+  &.active,
+  &:hover {
     background-color: $color-light-blue;
   }
 
