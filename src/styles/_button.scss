@@ -14,6 +14,7 @@ button {
   padding: 10px 30px;
   font-size: 16px;
   background-color: #fff;
+  transition: all 0.3s ease 0s;
 
   p {
     color: $color-light-blue;
@@ -25,6 +26,19 @@ button {
 
     p {
       color: $color-disabled;
+    }
+  }
+
+  &:hover:not(.disabled) {
+    box-shadow: 3px 3px 6px rgba(6, 36, 80, 0.2);
+  }
+
+  &:active {
+    background-color: $color-light-purple;
+    border-color: $color-light-purple;
+
+    p {
+      color: #fff;
     }
   }
 }

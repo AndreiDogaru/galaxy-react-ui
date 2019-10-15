@@ -1,0 +1,37 @@
+@import '../../../../../styles/colors';
+
+.post_actions {
+  padding: 10px 25px 20px;
+  display: flex;
+
+  .clickable {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+      color: $color-grey;
+      margin-right: 5px;
+    }
+
+    &:first-child {
+      margin-right: 25px;
+
+      &.focused {
+        h4 {
+          color: $color-red;
+        }
+
+        svg {
+          fill: $color-red;
+          color: $color-red;
+        }
+      }
+    }
+  }
+}

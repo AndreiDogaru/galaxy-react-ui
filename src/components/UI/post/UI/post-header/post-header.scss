@@ -1,0 +1,21 @@
+@import '../../../../../styles/colors';
+
+.post_header {
+  width: 100%;
+  background-color: $color-light-purple;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+
+  p {
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

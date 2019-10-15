@@ -1,62 +1,36 @@
-import React, { useState } from 'react';
-import * as Icon from 'react-feather';
+import React from 'react';
 
 import './post.scss';
-import ProfileIcon from '../profile-icon/profile-icon';
+import PostHeader from './UI/post-header/post-header';
+import PostSubheader from './UI/post-subheader/post-subheader';
+import PostText from './UI/post-text/post-text';
+import PostFiles from './UI/post-files/post-files';
 import PostImages from './UI/post-images/post-images';
+import PostStatistics from './UI/post-statistics/post-statistics';
+import PostActions from './UI/post-actions/post-actions';
 
 const Post = (props) => {
-  const [isLiked, setIsLiked] = useState(false);
-
   return (
     <div className="card post_container">
-      <div className="post_header">
-        <Icon.Grid color="#fff" size={15} />
-        <p>{props.data.groupName}</p>
-      </div>
+      <PostHeader groupName={props.data.groupName} />
 
-      <div className="post_subheader">
-        <div className="left">
-          <ProfileIcon />
-          <div className="name_job-title">
-            <h5>Andrei Dogaru</h5>
-            <p>Senior Web Developer</p>
-          </div>
-        </div>
+      <PostSubheader />
 
-        <div className="right">
-          <Icon.MoreHorizontal />
-          <p>2h</p>
-        </div>
-      </div>
+      <PostText text={props.data.text} />
 
-      <p className="post_text">{props.data.text}</p>
+      {props.data.files && props.data.files.length > 0 && (
+        <PostFiles data={props.data.files} />
+      )}
 
       {props.data.images && props.data.images.length > 0 && (
         <PostImages data={props.data.images} />
       )}
 
-      <div className="post_statistics">
-        <p>8 Likes</p>
-        <p>13 Comments</p>
-      </div>
+      <PostStatistics />
 
       <hr />
 
-      <div className="post_actions">
-        <div 
-          className={isLiked ? 'clickable focused' : 'clickable'} 
-          onClick={() => setIsLiked(prev => !prev)}
-        >
-          <Icon.Heart />
-          <h4>Like</h4>
-        </div>
-
-        <div className="clickable">
-          <Icon.MessageSquare />
-          <h4>Comment</h4>
-        </div>
-      </div>
+      <PostActions />
     </div>
   );
 };

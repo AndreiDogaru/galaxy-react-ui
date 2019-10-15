@@ -11,6 +11,10 @@ const postList = [
 
       Progressively incentivize compelling results through cross-unit manufactured products. Globally evisculate resource maximizing synergy rather than flexible vortals. Dynamically e-enable highly efficient metrics rather than mission-critical catalysts for change. Objectively reintermediate exceptional testing procedures through leveraged infrastructures.`,
     images: [],
+    files: [
+      { id: 1, name: 'Final Statement.pdf' },
+      { id: 2, name: 'Final Statement - v2.pdf' },
+    ],
   },
   {
     id: 2,
@@ -20,6 +24,9 @@ const postList = [
       Progressively incentivize compelling results through cross-unit manufactured products. Globally evisculate resource maximizing synergy rather than flexible vortals. Dynamically e-enable highly efficient metrics rather than mission-critical catalysts for change. Objectively reintermediate exceptional testing procedures through leveraged infrastructures.`,
     images: [
       '/images/1.jpg',
+    ],
+    files: [
+      { id: 1, name: 'andrei-dogaru-serban-cv-2019-10-15.pdf' },
     ],
   },
   {
@@ -35,6 +42,7 @@ const postList = [
       '/images/4.jpg',
       '/images/2.jpg',
     ],
+    files: [],
   },
 ];
 

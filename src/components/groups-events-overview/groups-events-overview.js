@@ -23,8 +23,8 @@ const GroupsEventsOverview = () => {
   
   return (
     <div className="groups_events_container" style={{ left: leftPosition + 'px' }}>
-      {/* <GroupsOverview /> */}
-      <EventsOverview />
+      <GroupsOverview />
+      {false && <EventsOverview />}
     </div>
   );
 };
