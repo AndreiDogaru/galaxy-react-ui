@@ -7,8 +7,8 @@ import FooterLinks from '../footer-links/footer-links';
 // Store here all paths for which this component should be visible
 const visiblePaths = ['/'];
 
-const ProfileCard = (props) => {
-  let location = useLocation();
+const ProfileCard = () => {
+  const location = useLocation();
 
   if (visiblePaths.indexOf(location.pathname) === -1) {
     return null;
@@ -17,10 +17,10 @@ const ProfileCard = (props) => {
   return (
     <div className="profile_card_container">
       <div className="card">
-        <div className="profile_image"></div>
+        <div className="profile_image" />
         <h4>Andrei Dogaru</h4>
         <p>Senior Web Developer</p>
-        <button className="secondary_button">
+        <button type="button" className="secondary_button">
           <p>View Profile</p>
         </button>
       </div>

@@ -4,21 +4,21 @@ import * as Icon from 'react-feather';
 import './events-overview.scss';
 
 const events = [
-  { 
-    id: 1, 
-    title: 'How to improve your sales force', 
+  {
+    id: 1,
+    title: 'How to improve your sales force',
     numParticipants: 128,
     location: 'Titangade 11, 2200 Copenhagen',
   },
-  { 
-    id: 2, 
-    title: 'How to improve your sales force', 
+  {
+    id: 2,
+    title: 'How to improve your sales force',
     numParticipants: 128,
     location: 'Titangade 11, 2200 Copenhagen',
   },
-  { 
-    id: 3, 
-    title: 'How to improve your sales force', 
+  {
+    id: 3,
+    title: 'How to improve your sales force',
     numParticipants: 128,
     location: 'Titangade 11, 2200 Copenhagen',
   },
@@ -28,7 +28,8 @@ const EventsOverview = () => {
   const [maxHeight, setMaxHeight] = useState(400);
 
   const updateDimensionsHandler = () => {
-    // set maxHeight for this element to window height - 100px ( that's header heaight + margin top/bottom )
+    // set maxHeight for this element to window height - 100px
+    // ( that's header heaight + margin top/bottom )
     setMaxHeight(window.innerHeight - 100);
   };
 
@@ -39,7 +40,7 @@ const EventsOverview = () => {
   }, []);
 
   return (
-    <div className="card events_card" style={{ maxHeight: maxHeight + 'px' }}>
+    <div className="card events_card" style={{ maxHeight: `${maxHeight}px` }}>
       <div className="card_header">
         <Icon.Calendar color="#fff" />
         <p>Upcoming Events</p>
@@ -58,7 +59,11 @@ const EventsOverview = () => {
 
               <div className="event_overview_item-row">
                 <p>{item.location}</p>
-                <p className="focused">{item.numParticipants} people</p>
+                <p className="focused">
+                  {item.numParticipants}
+                  {' '}
+                  people
+                </p>
               </div>
             </div>
             <hr />
@@ -68,7 +73,7 @@ const EventsOverview = () => {
       </div>
 
       <div className="card_footer">
-        <button className="secondary_button">
+        <button type="button" className="secondary_button">
           <p>Browse Events</p>
         </button>
       </div>

@@ -13,7 +13,8 @@ const GroupsOverview = () => {
   const [maxHeight, setMaxHeight] = useState(400);
 
   const updateDimensionsHandler = () => {
-    // set maxHeight for this element to window height - 100px ( that's header heaight + margin top/bottom )
+    // set maxHeight for this element to window height - 100px
+    // ( that's header heaight + margin top/bottom )
     setMaxHeight(window.innerHeight - 100);
   };
 
@@ -24,7 +25,7 @@ const GroupsOverview = () => {
   }, []);
 
   return (
-    <div className="card groups_card" style={{ maxHeight: maxHeight + 'px' }}>
+    <div className="card groups_card" style={{ maxHeight: `${maxHeight}px` }}>
       <div className="card_header">
         <Icon.Grid color="#fff" />
         <p>Your Groups</p>
@@ -37,7 +38,10 @@ const GroupsOverview = () => {
             <div className="group_overview_item-right_side">
               <p>{item.title}</p>
               <p className="group_overview_item-right_side-users">
-                {item.numMembers} member{item.numMembers > 1 ? 's' : ''}
+                {item.numMembers}
+                {' '}
+                member
+                {item.numMembers > 1 ? 's' : ''}
               </p>
             </div>
           </div>
@@ -45,7 +49,7 @@ const GroupsOverview = () => {
       </div>
 
       <div className="card_footer">
-        <button className="secondary_button">
+        <button type="button" className="secondary_button">
           <p>Browse Groups</p>
         </button>
       </div>

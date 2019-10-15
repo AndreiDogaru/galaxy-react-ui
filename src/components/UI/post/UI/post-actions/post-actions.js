@@ -10,7 +10,11 @@ const PostActions = () => {
     <div className="post_actions">
       <div
         className={isLiked ? 'clickable focused' : 'clickable'}
-        onClick={() => setIsLiked(prev => !prev)}
+        onClick={() => setIsLiked((prev) => !prev)}
+        onKeyPress={() => { }}
+        role="checkbox"
+        tabIndex={0}
+        aria-checked={isLiked}
       >
         <Heart />
         <h4>Like</h4>

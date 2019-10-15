@@ -4,12 +4,14 @@ import { Grid } from 'react-feather';
 import './post-header.scss';
 
 const PostHeader = (props) => {
+  const { groupName } = props;
+
   return (
     <div className="post_header">
       <Grid color="#fff" size={15} />
-      <p>{props.groupName}</p>
+      <p>{groupName}</p>
     </div>
   );
 };
 
-export default PostHeader
+export default PostHeader;

@@ -9,9 +9,10 @@ const GroupsEventsOverview = () => {
 
   const updateDimensionsHandler = () => {
     // position this element under the header profile icon
-    const elementRef = document.querySelector('.header_container .profile_icon')
+    const elementRef = document.querySelector('.header_container .profile_icon');
     const { offsetLeft } = elementRef;
-    // offsetLeft is where the header profile icon starts, 40 is its width and 335 is the width of this element
+    // offsetLeft is where the header profile icon starts,
+    // 40 is its width and 335 is the width of this element
     setLeftPosition(offsetLeft - 335 + 40);
   };
 
@@ -20,9 +21,9 @@ const GroupsEventsOverview = () => {
     updateDimensionsHandler();
     return () => window.removeEventListener('resize', updateDimensionsHandler);
   }, []);
-  
+
   return (
-    <div className="groups_events_container" style={{ left: leftPosition + 'px' }}>
+    <div className="groups_events_container" style={{ left: `${leftPosition}px` }}>
       <GroupsOverview />
       {false && <EventsOverview />}
     </div>

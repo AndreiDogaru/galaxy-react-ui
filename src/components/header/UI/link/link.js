@@ -4,15 +4,17 @@ import { NavLink } from 'react-router-dom';
 import './link.scss';
 
 const HeaderLink = (props) => {
+  const { route, icon, title } = props;
+
   return (
-    <NavLink 
+    <NavLink
       className="link"
       exact
-      to={props.route}
+      to={route}
       activeClassName="active"
     >
-      {props.icon}
-      <p>{props.title}</p>
+      {icon}
+      <p>{title}</p>
     </NavLink>
   );
 };

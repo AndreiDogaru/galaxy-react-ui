@@ -3,27 +3,32 @@ import React from 'react';
 import './post-images.scss';
 
 const PostImages = (props) => {
+  const { data } = props;
+
   return (
     <div className="post_images">
       <div
         className="image big_image"
-        style={{ backgroundImage: `url(${props.data[0]})` }}
-      ></div>
+        style={{ backgroundImage: `url(${data[0]})` }}
+      />
 
-      {props.data.length > 1 && (
+      {data.length > 1 && (
         <div className="small_images_row">
-          {props.data.map((item, index) => {
+          {data.map((item, index) => {
             if (index > 0 && index < 4) {
               return (
                 <div
-                  key={index}
+                  key={item.id}
                   className="image small_image_row-item"
-                  style={{ backgroundImage: `url(${item})` }}
+                  style={{ backgroundImage: `url(${item.name})` }}
                 >
-                  {props.data.length > 4 && index === 3 && (
+                  {data.length > 4 && index === 3 && (
                     <div className="show_more_images">
-                      <div className="show_more_images-opacity"></div>
-                      <h1>+ {props.data.length - 4}</h1>
+                      <div className="show_more_images-opacity" />
+                      <h1>
+                        +
+                        {data.length - 4}
+                      </h1>
                     </div>
                   )}
                 </div>

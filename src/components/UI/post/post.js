@@ -10,20 +10,22 @@ import PostStatistics from './UI/post-statistics/post-statistics';
 import PostActions from './UI/post-actions/post-actions';
 
 const Post = (props) => {
+  const { data } = props;
+
   return (
     <div className="card post_container">
-      <PostHeader groupName={props.data.groupName} />
+      <PostHeader groupName={data.groupName} />
 
       <PostSubheader />
 
-      <PostText text={props.data.text} />
+      <PostText text={data.text} />
 
-      {props.data.files && props.data.files.length > 0 && (
-        <PostFiles data={props.data.files} />
+      {data.files && data.files.length > 0 && (
+        <PostFiles data={data.files} />
       )}
 
-      {props.data.images && props.data.images.length > 0 && (
-        <PostImages data={props.data.images} />
+      {data.images && data.images.length > 0 && (
+        <PostImages data={data.images} />
       )}
 
       <PostStatistics />
