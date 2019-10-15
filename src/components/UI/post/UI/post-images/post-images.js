@@ -9,7 +9,7 @@ const PostImages = (props) => {
     <div className="post_images">
       <div
         className="image big_image"
-        style={{ backgroundImage: `url(${data[0]})` }}
+        style={{ backgroundImage: `url(${data[0].name})` }}
       />
 
       {data.length > 1 && (
