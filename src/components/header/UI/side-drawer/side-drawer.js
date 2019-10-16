@@ -3,7 +3,7 @@ import * as Icon from 'react-feather';
 import { Drawer, Divider } from '@material-ui/core';
 
 import './side-drawer.scss';
-import HeaderLink from '../header/UI/link/link';
+import HeaderLink from '../link/link';
 
 const SideDrawer = (props) => {
   const {

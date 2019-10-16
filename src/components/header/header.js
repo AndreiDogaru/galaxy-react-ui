@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 
 import './header.scss';
 import HeaderLink from './UI/link/link';
+import SideDrawer from './UI/side-drawer/side-drawer';
 import ProfileIcon from '../UI/profile-icon/profile-icon';
 import DropdownMenu from '../UI/dropdown-menu/dropdown-menu';
-import SideDrawer from '../side-drawer/side-drawer';
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
