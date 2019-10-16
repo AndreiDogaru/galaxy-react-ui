@@ -1,4 +1,18 @@
 .home_container {
   margin-left: 280px;
-  width: 550px;
+  max-width: 550px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1195px) {
+  .home_container {
+    padding: 0 20px;
+    max-width: 570px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .home_container {
+    margin: 0 auto;
+  }
 }

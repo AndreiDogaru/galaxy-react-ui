@@ -25,7 +25,8 @@ const Header = () => {
     <div className="header_container">
       <div className="content">
         <div className="left">
-          <p>Logo goes here</p>
+          <img alt="Logo" src="/images/logo_text.svg" />
+          <Icon.Menu />
         </div>
 
         <div className="center">
@@ -74,7 +75,7 @@ const Header = () => {
             role="button"
             tabIndex={0}
           >
-            <ProfileIcon style={{ marginLeft: '20px' }} />
+            <ProfileIcon />
           </div>
         </div>
       </div>

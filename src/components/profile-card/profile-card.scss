@@ -25,3 +25,15 @@
     }
   }
 }
+
+@media screen and (max-width: 1195px) {
+  .profile_card_container {
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .profile_card_container {
+    display: none;
+  }
+}
