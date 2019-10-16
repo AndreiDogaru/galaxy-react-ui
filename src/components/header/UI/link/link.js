@@ -9,11 +9,12 @@ const HeaderLink = (props) => {
     icon,
     title,
     clickEventHandler,
+    className,
   } = props;
 
   return (
     <NavLink
-      className="link"
+      className={`link ${className}`}
       exact
       to={route}
       activeClassName="active"

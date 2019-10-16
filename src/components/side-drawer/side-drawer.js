@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Icon from 'react-feather';
-import { Drawer } from '@material-ui/core';
+import { Drawer, Divider } from '@material-ui/core';
 
 import './side-drawer.scss';
 import HeaderLink from '../header/UI/link/link';
@@ -42,6 +42,8 @@ const SideDrawer = (props) => {
           clickEventHandler={onClose}
         />
 
+        <Divider />
+
         <HeaderLink
           title="Messages"
           icon={<Icon.MessageSquare />}
@@ -54,6 +56,39 @@ const SideDrawer = (props) => {
           icon={<Icon.Bell />}
           route="notifications"
           clickEventHandler={onClose}
+        />
+
+        <Divider />
+
+        <HeaderLink
+          title="Profile"
+          icon={<Icon.User />}
+          route="notifications"
+          clickEventHandler={onClose}
+        />
+
+        <HeaderLink
+          title="Settings"
+          icon={<Icon.Settings />}
+          route="notifications"
+          clickEventHandler={onClose}
+        />
+
+        <HeaderLink
+          title="Admin"
+          icon={<Icon.UserCheck />}
+          route="notifications"
+          clickEventHandler={onClose}
+        />
+
+        <Divider />
+
+        <HeaderLink
+          title="Log out"
+          icon={<Icon.LogOut />}
+          route="notifications"
+          clickEventHandler={onClose}
+          className="link-red"
         />
       </div>
     </Drawer>

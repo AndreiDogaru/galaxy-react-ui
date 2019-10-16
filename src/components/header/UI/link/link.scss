@@ -26,6 +26,13 @@
     flex-direction: row;
     justify-content: flex-start;
 
+    &.link-red {
+      p,
+      svg {
+        color: $color-red;
+      }
+    }
+
     p {
       margin-left: 20px;
       font-size: 20px;
