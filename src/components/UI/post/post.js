@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './post.scss';
 import PostHeader from './UI/post-header/post-header';
@@ -8,9 +8,16 @@ import PostFiles from './UI/post-files/post-files';
 import PostImages from './UI/post-images/post-images';
 import PostStatistics from './UI/post-statistics/post-statistics';
 import PostActions from './UI/post-actions/post-actions';
+import PostComments from './UI/post-comments/post-comments';
 
 const Post = (props) => {
+  const [isCommentsOpened, setIsCommentsOpened] = useState(false);
+
   const { data } = props;
+
+  const toggleCommentsHandler = () => {
+    setIsCommentsOpened((prev) => !prev);
+  };
 
   return (
     <div className="card post_container">
@@ -28,11 +35,16 @@ const Post = (props) => {
         <PostImages data={data.images} />
       )}
 
-      <PostStatistics />
+      <PostStatistics toggleComments={toggleCommentsHandler} />
 
       <hr />
 
-      <PostActions />
+      <PostActions toggleComments={toggleCommentsHandler} />
+
+      <PostComments
+        isOpened={isCommentsOpened}
+        postId={data.id}
+      />
     </div>
   );
 };

@@ -1,0 +1,11 @@
+.post_comments-container {
+  box-shadow: inset 0 6px 6px -2px rgba(6, 36, 80, 0.2);
+
+  .post_comments-content {
+    padding: 25px 20px;
+
+    &.post_comments-content-hidden {
+      display: none;
+    }
+  }
+}

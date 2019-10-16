@@ -3,8 +3,10 @@ import { Heart, MessageSquare } from 'react-feather';
 
 import './post-actions.scss';
 
-const PostActions = () => {
+const PostActions = (props) => {
   const [isLiked, setIsLiked] = useState(false);
+
+  const { toggleComments } = props;
 
   return (
     <div className="post_actions">
@@ -20,7 +22,13 @@ const PostActions = () => {
         <h4>Like</h4>
       </div>
 
-      <div className="clickable">
+      <div
+        className="clickable"
+        onClick={toggleComments}
+        onKeyPress={() => { }}
+        role="button"
+        tabIndex={0}
+      >
         <MessageSquare />
         <h4>Comment</h4>
       </div>
