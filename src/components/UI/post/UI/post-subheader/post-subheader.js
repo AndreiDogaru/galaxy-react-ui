@@ -9,8 +9,10 @@ const PostSubheader = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const menuItems = [
-    { id: 1, name: 'Delete post', icon: <Trash2 size={18} /> },
     { id: 2, name: 'Edit post', icon: <Edit2 size={18} /> },
+    {
+      id: 1, name: 'Delete post', icon: <Trash2 size={18} />, className: 'dropdown_menu_item-red',
+    },
   ];
 
   const toggleMenuHandler = (event) => {

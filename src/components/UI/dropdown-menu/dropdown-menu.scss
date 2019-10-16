@@ -11,8 +11,6 @@
   }
 
   &.dropdown_menu_item-red {
-    border-top: 1px solid $color-disabled;
-
     svg, p {
       color: $color-red;
     }
