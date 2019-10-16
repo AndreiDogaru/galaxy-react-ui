@@ -18,5 +18,10 @@ export default createMuiTheme({
         padding: '0',
       },
     },
+    MuiDrawer: {
+      paper: {
+        backgroundColor: colors.background,
+      },
+    },
   },
 });

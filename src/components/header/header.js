@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
 import * as Icon from 'react-feather';
+import { NavLink } from 'react-router-dom';
 
 import './header.scss';
 import HeaderLink from './UI/link/link';
 import ProfileIcon from '../UI/profile-icon/profile-icon';
 import DropdownMenu from '../UI/dropdown-menu/dropdown-menu';
+import SideDrawer from '../side-drawer/side-drawer';
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [isDrawerOpened, setIsDrawerOpened] = useState(false);
 
   const toggleMenuHandler = (event) => {
     setAnchorEl(event ? event.currentTarget : null);
+  };
+
+  const toggleDrawerHandler = () => {
+    setIsDrawerOpened((prev) => !prev);
   };
 
   const menuItems = [
@@ -25,8 +32,11 @@ const Header = () => {
     <div className="header_container">
       <div className="content">
         <div className="left">
-          <img alt="Logo" src="/images/logo_text.svg" />
-          <Icon.Menu />
+          <NavLink className="logo_link" exact to="">
+            <img alt="Logo" src="/images/logo_text.svg" />
+          </NavLink>
+
+          <Icon.Menu onClick={toggleDrawerHandler} />
         </div>
 
         <div className="center">
@@ -88,6 +98,11 @@ const Header = () => {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
         transformOrigin={{ vertical: 'top', horizontal: 'center' }}
         className="header_profile_dropdown"
+      />
+
+      <SideDrawer
+        isDrawerOpened={isDrawerOpened}
+        onClose={toggleDrawerHandler}
       />
     </div>
   );
