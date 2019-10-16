@@ -1,0 +1,32 @@
+@import '../../../styles/colors';
+
+.dropdown_menu_item {
+  svg {
+    color: $color-grey;
+  }
+
+  p {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+
+  &.dropdown_menu_item-red {
+    border-top: 1px solid $color-disabled;
+
+    svg, p {
+      color: $color-red;
+    }
+  }
+}
+
+
+.header_profile_dropdown {
+  .dropdown_menu_item {
+    padding: 10px 25px;
+
+    p {
+      font-size: 16px;
+      margin-left: 20px;
+    }
+  }
+}

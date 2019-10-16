@@ -9,3 +9,7 @@ $color-green: #2CBD9B;
 $color-red: #F05656;
 
 $color-background: #F4F5F9;
+
+:export {
+  background: $color-background;
+}
