@@ -19,10 +19,18 @@
       color: $color-grey;
     }
 
-    svg {
-      margin: 0 5px;
-      color: $color-grey;
-      cursor: pointer;
+    .clickable {
+      padding: 2px 7px;
+      display: flex;
+
+      svg {
+        color: $color-grey;
+        cursor: pointer;
+      }
+
+      &:hover {
+        background-color: $color-background;
+      }
     }
   }
 }

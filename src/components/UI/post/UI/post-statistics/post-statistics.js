@@ -3,19 +3,21 @@ import React from 'react';
 import './post-statistics.scss';
 
 const PostStatistics = (props) => {
-  const { toggleComments } = props;
+  const { toggleComments, inComment } = props;
 
   return (
-    <div className="post_statistics">
+    <div className={`post_statistics ${inComment ? 'post_statistics-incomment' : ''}`}>
       <p>8 Likes</p>
-      <div
-        onClick={toggleComments}
-        onKeyPress={() => {}}
-        role="button"
-        tabIndex={0}
-      >
-        <p>13 Comments</p>
-      </div>
+      {!inComment && (
+        <div
+          onClick={toggleComments}
+          onKeyPress={() => {}}
+          role="button"
+          tabIndex={0}
+        >
+          <p>13 Comments</p>
+        </div>
+      )}
     </div>
   );
 };

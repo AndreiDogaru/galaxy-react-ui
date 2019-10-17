@@ -3,6 +3,10 @@
 .post_text_container {
   padding: 0 25px 15px;
 
+  &.post_text_container-incomment {
+    padding: 10px 15px;
+  }
+
   .post_text {
     font-size: 14px;
     white-space: pre-line;

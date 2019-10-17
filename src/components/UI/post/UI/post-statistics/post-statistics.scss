@@ -3,6 +3,10 @@
   align-self: flex-start;
   display: flex;
 
+  &.post_statistics-incomment {
+    padding: 10px 15px;
+  }
+
   p {
     font-size: 12px;
     cursor: pointer;

@@ -3,7 +3,6 @@
 .post_subheader {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   padding: 20px 25px;
 
@@ -11,9 +10,11 @@
     display: flex;
     align-items: center;
 
-    .name_job-title {
-      margin-left: 10px;
+    .profile_icon {
+      margin-right: 10px;
+    }
 
+    .name_job-title {
       h5 {
         font-weight: 900;
         font-size: 14px;
@@ -44,5 +45,9 @@
     p {
       font-size: 12px;
     }
+  }
+
+  &.post_subheader-incomment {
+    padding: 10px 15px;
   }
 }

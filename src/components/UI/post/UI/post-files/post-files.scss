@@ -3,6 +3,10 @@
 .post_files {
   padding: 0 25px 5px;
 
+  &.post_files-incomment {
+    padding: 10px 15px 0;
+  }
+
   .post_files-item {
     display: flex;
     align-items: center;

@@ -1,0 +1,51 @@
+@import '../../../../../../../styles/colors';
+
+.small_images_row {
+  display: flex;
+  margin-top: 2px;
+
+  .small_image_row-item {
+    flex: 1;
+    height: 130px;
+    position: relative;
+
+    &:nth-child(2) {
+      margin: 0 2px;
+    }
+
+    .show_more_images {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .show_more_images-opacity {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $color-dark-blue;
+        opacity: 0.7;
+      }
+
+      h1 {
+        opacity: 1;
+        color: #fff;
+        z-index: 1;
+      }
+    }
+  }
+
+  &.small_images_row-incomment {
+    .small_image_row-item {
+      height: 100px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}

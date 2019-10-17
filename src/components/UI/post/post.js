@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Trash2, Edit2 } from 'react-feather';
 
 import './post.scss';
 import PostHeader from './UI/post-header/post-header';
@@ -15,6 +16,13 @@ const Post = (props) => {
 
   const { data } = props;
 
+  const menuItems = [
+    { id: 2, name: 'Edit post', icon: <Edit2 size={18} /> },
+    {
+      id: 1, name: 'Delete post', icon: <Trash2 size={18} />, className: 'dropdown_menu_item-red',
+    },
+  ];
+
   const toggleCommentsHandler = () => {
     setIsCommentsOpened((prev) => !prev);
   };
@@ -23,7 +31,7 @@ const Post = (props) => {
     <div className="card post_container">
       <PostHeader groupName={data.groupName} />
 
-      <PostSubheader />
+      <PostSubheader menuItems={menuItems} />
 
       <PostText text={data.text} />
 

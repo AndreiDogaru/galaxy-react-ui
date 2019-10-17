@@ -1,0 +1,20 @@
+@import '../../../../../../..//styles/colors';
+
+.comment_container {
+  margin-top: 20px;
+  display: flex;
+
+  .profile_icon {
+    margin-top: 10px;
+  }
+
+  .comment_content {
+    background-color: $color-background;
+    width: 100%;
+    margin-left: 10px;
+
+    .comment_images {
+      padding: 10px 15px 0;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 
 import './post-comments.scss';
 import InputContainer from './UI/input-container/input-container';
+import CommentContainer from './UI/comment_container/comment_container';
 
 const PostComments = (props) => {
   const { isOpened, postId } = props;
@@ -18,8 +19,13 @@ const PostComments = (props) => {
       images: [
         { id: 1, name: '/images/1.jpg' },
         { id: 2, name: '/images/2.jpg' },
+        { id: 3, name: '/images/2.jpg' },
+        { id: 4, name: '/images/2.jpg' },
+        { id: 5, name: '/images/2.jpg' },
       ],
-      files: [],
+      files: [
+        { id: 1, name: 'andrei-dogaru-serban-cv-2019-10-15.pdf' },
+      ],
     });
   }
 
@@ -27,6 +33,10 @@ const PostComments = (props) => {
     <div className="post_comments-container">
       <div className={`post_comments-content ${!isOpened ? 'post_comments-content-hidden' : ''}`}>
         <InputContainer />
+
+        {comments.map((item) => (
+          <CommentContainer key={item.id} data={item} />
+        ))}
       </div>
     </div>
   );

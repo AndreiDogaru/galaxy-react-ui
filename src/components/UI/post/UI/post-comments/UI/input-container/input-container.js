@@ -36,9 +36,15 @@ const InputContainer = () => {
           onKeyDown={keydownHandler}
           maxRows={10}
         />
-        <Smile />
-        <FileText />
-        <Camera />
+        <div className="clickable">
+          <Smile />
+        </div>
+        <div className="clickable">
+          <FileText />
+        </div>
+        <div className="clickable">
+          <Camera />
+        </div>
       </div>
     </div>
   );
