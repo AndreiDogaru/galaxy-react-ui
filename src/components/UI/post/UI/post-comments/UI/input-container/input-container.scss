@@ -34,3 +34,16 @@
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .input_container {
+    .input_content {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+      .clickable {
+        margin-top: 10px;
+      }
+    }
+  }
+}

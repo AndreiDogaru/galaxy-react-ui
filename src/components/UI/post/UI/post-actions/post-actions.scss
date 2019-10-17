@@ -35,4 +35,21 @@
       background-color: $color-background;
     }
   }
+
+  &.post_actions-incomment {
+    padding: 5px 0;
+
+    .clickable {
+      padding: 5px 10px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      h4 {
+        font-size: 12px;
+      }
+    }
+  }
 }
