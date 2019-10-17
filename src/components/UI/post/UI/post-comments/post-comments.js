@@ -29,9 +29,13 @@ const PostComments = (props) => {
     });
   }
 
+  if (!isOpened) {
+    return null;
+  }
+
   return (
     <div className="post_comments-container">
-      <div className={`post_comments-content ${!isOpened ? 'post_comments-content-hidden' : ''}`}>
+      <div className="post_comments-content">
         <InputContainer />
 
         {comments.map((item) => (

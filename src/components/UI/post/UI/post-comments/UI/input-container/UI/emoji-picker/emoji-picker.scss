@@ -1,4 +1,6 @@
 .emoji_picker_container {
+  position: relative;
+
   @media screen and (max-width: 1195px) {
     display: none;
   }
