@@ -1,15 +1,14 @@
-import React from 'react';
-import {
-  Smile,
-  FileText,
-  Camera,
-} from 'react-feather';
+import React, { useState } from 'react';
+import { FileText, Camera } from 'react-feather';
 import Textarea from 'react-textarea-autosize';
 
 import './input-container.scss';
 import ProfileIcon from '../../../../../profile-icon/profile-icon';
+import EmojiPicker from './UI/emoji-picker/emoji-picker';
 
 const InputContainer = () => {
+  const [enteredText, setEnteredText] = useState('');
+
   const submitMessage = (event) => {
     // Prevent enter from creating new line
     if (event) {
@@ -35,13 +34,16 @@ const InputContainer = () => {
           placeholder="Add a comment..."
           onKeyDown={keydownHandler}
           maxRows={10}
+          value={enteredText}
+          onChange={(event) => setEnteredText(event.target.value)}
         />
-        <div className="clickable">
-          <Smile />
-        </div>
+
+        <EmojiPicker onEmojiPicked={(emoji) => setEnteredText((prev) => prev + emoji)} />
+
         <div className="clickable">
           <FileText />
         </div>
+
         <div className="clickable">
           <Camera />
         </div>
