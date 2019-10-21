@@ -3,15 +3,12 @@
 .post_files {
   padding: 0 25px 5px;
 
-  &.post_files-incomment {
-    padding: 10px 15px 0;
-  }
-
   .post_files-item {
     display: flex;
     align-items: center;
     color: $color-grey;
     margin-bottom: 5px;
+    width: fit-content;
 
     svg {
       min-width: 15px;
@@ -24,6 +21,38 @@
 
       &:hover {
         text-decoration: underline;
+      }
+    }
+
+    .remove_file {
+      display: flex;
+      border-radius: 2px;
+      margin-left: 10px;
+      padding: 2px;
+      background-color: $color-red;
+      opacity: 0.8;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.post_files-incomment {
+    padding: 10px 15px 0;
+  }
+
+  &.post_files-uploaded {
+    padding: 10px 0 0;
+
+    .post_files-item {
+      p {
+        cursor: initial;
+
+        &:hover{
+          text-decoration: none;
+        }
       }
     }
   }

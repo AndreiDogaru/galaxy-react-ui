@@ -4,34 +4,38 @@
   display: flex;
   
   .input_content {
-    display: flex;
     min-height: 40px;
     width: 100%;
     box-shadow: 0 3px 6px rgba(6, 36, 80, 0.2);
     margin-left: 10px;
     padding: 10px;
 
-    textarea {
-      align-self: center;
-      width: 100%;
-      resize: none;
-      font-size: 14px;
-      color: $color-grey;
-    }
-
-    .clickable {
-      padding: 2px 7px;
+    .input_row {
       display: flex;
 
-      svg {
+      textarea {
+        align-self: center;
+        width: 100%;
+        resize: none;
+        font-size: 14px;
         color: $color-grey;
-        cursor: pointer;
       }
-
-      &:hover {
-        background-color: $color-background;
+  
+      .clickable {
+        padding: 2px 7px;
+        display: flex;
+  
+        svg {
+          color: $color-grey;
+          cursor: pointer;
+        }
+  
+        &:hover {
+          background-color: $color-background;
+        }
       }
     }
+
   }
 }
 
