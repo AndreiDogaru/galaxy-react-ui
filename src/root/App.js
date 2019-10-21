@@ -13,6 +13,7 @@ import Header from '../components/header/header';
 import Home from '../pages/home/home';
 import ProfileCard from '../components/profile-card/profile-card';
 import GroupsEventsOverview from '../components/groups-events-overview/groups-events-overview';
+import FixedChat from '../components/fixed-chat/fixed-chat';
 import theme from '../theme';
 
 const App = () => (
@@ -46,6 +47,8 @@ const App = () => (
             <GroupsEventsOverview />
           </div>
         </BrowserRouter>
+
+        <FixedChat />
       </div>
     </SnackbarProvider>
   </MuiThemeProvider>
