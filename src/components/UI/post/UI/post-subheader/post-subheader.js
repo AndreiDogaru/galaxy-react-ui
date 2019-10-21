@@ -57,7 +57,8 @@ const PostSubheader = (props) => {
       {menuItems && (
         <DropdownMenu
           anchorEl={anchorEl}
-          handleClose={(e) => toggleMenuHandler(e, true)}
+          handleClose={toggleMenuHandler}
+          handleItemClick={() => toggleMenuHandler(null, true)}
           menuItems={menuItems}
           getContentAnchorEl={null}
           anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}

@@ -7,6 +7,7 @@ const DropdownMenu = (props) => {
   const {
     anchorEl,
     handleClose,
+    handleItemClick,
     menuItems,
     getContentAnchorEl,
     anchorOrigin,
@@ -29,7 +30,7 @@ const DropdownMenu = (props) => {
         <MenuItem
           className={`dropdown_menu_item  ${item.className}`}
           key={item.id}
-          onClick={() => handleClose(null)}
+          onClick={() => handleItemClick()}
         >
           {item.icon}
           <p>{item.name}</p>
