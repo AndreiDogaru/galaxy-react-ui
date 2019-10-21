@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Camera } from 'react-feather';
 import Textarea from 'react-textarea-autosize';
+import { Button } from '@material-ui/core';
+import { withSnackbar } from 'notistack';
 
 import './input-container.scss';
 import ProfileIcon from '../../../../../profile-icon/profile-icon';
@@ -8,7 +10,7 @@ import EmojiPicker from './UI/emoji-picker/emoji-picker';
 import FileUploader from './UI/file-uploader/file-uploader';
 import PostFiles from '../../../post-files/post-files';
 
-const InputContainer = () => {
+const InputContainer = (props) => {
   const [enteredText, setEnteredText] = useState('');
   const [uploadedFiles, setUploadedFiles] = useState([]);
 
@@ -61,6 +63,23 @@ const InputContainer = () => {
     setUploadedFiles((prev) => [...prev.slice(0, index), ...prev.slice(index + 1, prev.length)]);
   };
 
+  /**
+   * Show a snackbar when user tries to upload an image.
+   */
+  const snackbarHandler = () => {
+    props.enqueueSnackbar(
+      'Feature coming soon',
+      {
+        autoHideDuration: 3000,
+        preventDuplicate: true,
+        variant: 'info',
+        action: (key) => (
+          <Button onClick={() => props.closeSnackbar(key)}>got it</Button>
+        ),
+      },
+    );
+  };
+
   return (
     <div className="input_container">
       <ProfileIcon />
@@ -84,7 +103,7 @@ const InputContainer = () => {
           <FileUploader onUpload={fileChangeHandler} />
 
           <div className="clickable">
-            <Camera />
+            <Camera onClick={snackbarHandler} />
           </div>
         </div>
 
@@ -100,4 +119,4 @@ const InputContainer = () => {
   );
 };
 
-export default InputContainer;
+export default withSnackbar(InputContainer);

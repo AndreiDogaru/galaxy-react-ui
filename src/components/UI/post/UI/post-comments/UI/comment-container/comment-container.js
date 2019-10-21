@@ -1,7 +1,7 @@
 import React from 'react';
 import { Edit2, Trash2 } from 'react-feather';
 
-import './comment_container.scss';
+import './comment-container.scss';
 import ProfileIcon from '../../../../../profile-icon/profile-icon';
 import PostSubheader from '../../../post-subheader/post-subheader';
 import PostText from '../../../post-text/post-text';

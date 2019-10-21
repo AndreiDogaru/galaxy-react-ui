@@ -2,7 +2,7 @@ import React from 'react';
 
 import './post-comments.scss';
 import InputContainer from './UI/input-container/input-container';
-import CommentContainer from './UI/comment_container/comment_container';
+import CommentContainer from './UI/comment-container/comment-container';
 
 const PostComments = (props) => {
   const { isOpened, postId } = props;

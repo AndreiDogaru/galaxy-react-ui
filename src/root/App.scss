@@ -1,3 +1,5 @@
+@import '../styles/colors';
+
 .page_container {
   width: 100vw;
   height: 100vh;
@@ -19,4 +21,14 @@
       overflow: auto;
     }
   }
+}
+
+.snackbar-success {
+  background-color: $color-green !important;
+}
+.snackbar-error {
+  background-color: $color-red !important;
+}
+.snackbar-info {
+  background-color: $color-light-blue !important;
 }

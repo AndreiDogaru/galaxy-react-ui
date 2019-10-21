@@ -6,6 +6,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 import { MuiThemeProvider } from '@material-ui/core';
+import { SnackbarProvider } from 'notistack';
 
 import './App.scss';
 import Header from '../components/header/header';
@@ -16,27 +17,37 @@ import theme from '../theme';
 
 const App = () => (
   <MuiThemeProvider theme={theme}>
-    <div className="page_container">
-      <BrowserRouter>
-        <Header />
+    <SnackbarProvider
+      maxSnack={3}
+      classes={{
+        variantSuccess: 'snackbar-success',
+        variantError: 'snackbar-error',
+        variantInfo: 'snackbar-info',
+      }}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+    >
+      <div className="page_container">
+        <BrowserRouter>
+          <Header />
 
-        <div className="page_content">
-          <ProfileCard />
+          <div className="page_content">
+            <ProfileCard />
 
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/groups" component={() => <p>Groups</p>} />
-            <Route path="/calendar" component={() => <p>Calendar</p>} />
-            <Route path="/users" component={() => <p>Users</p>} />
-            <Route path="/messages" component={() => <p>Messages</p>} />
-            <Route path="/notifications" component={() => <p>Notifications</p>} />
-            <Redirect from="*" to="/" />
-          </Switch>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/groups" component={() => <p>Groups</p>} />
+              <Route path="/calendar" component={() => <p>Calendar</p>} />
+              <Route path="/users" component={() => <p>Users</p>} />
+              <Route path="/messages" component={() => <p>Messages</p>} />
+              <Route path="/notifications" component={() => <p>Notifications</p>} />
+              <Redirect from="*" to="/" />
+            </Switch>
 
-          <GroupsEventsOverview />
-        </div>
-      </BrowserRouter>
-    </div>
+            <GroupsEventsOverview />
+          </div>
+        </BrowserRouter>
+      </div>
+    </SnackbarProvider>
   </MuiThemeProvider>
 );
 
