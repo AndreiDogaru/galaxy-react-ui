@@ -1,0 +1,24 @@
+@import '../../../../../../styles/colors';
+
+.fixed_chat_list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-top: 1px solid $color-disabled;
+  cursor: pointer;
+
+  .fixed_chat_list-item_right {
+    margin-left: 15px;
+    overflow: hidden;
+
+    p {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  &:hover {
+    background-color: $color-background;
+  }
+}
