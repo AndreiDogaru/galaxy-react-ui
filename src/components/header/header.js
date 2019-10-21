@@ -93,6 +93,7 @@ const Header = () => {
       <DropdownMenu
         anchorEl={anchorEl}
         handleClose={toggleMenuHandler}
+        handleItemClick={toggleMenuHandler}
         menuItems={menuItems}
         getContentAnchorEl={null}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
