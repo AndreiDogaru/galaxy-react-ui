@@ -24,6 +24,7 @@
       .clickable {
         padding: 2px 7px;
         display: flex;
+        height: fit-content;
   
         svg {
           color: $color-grey;

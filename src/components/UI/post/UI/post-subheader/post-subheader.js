@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { MoreHorizontal } from 'react-feather';
+import { Button } from '@material-ui/core';
+import { withSnackbar } from 'notistack';
 
 import './post-subheader.scss';
 import ProfileIcon from '../../../profile-icon/profile-icon';
@@ -10,8 +12,29 @@ const PostSubheader = (props) => {
 
   const { inComment, menuItems } = props;
 
-  const toggleMenuHandler = (event) => {
+  /**
+   * Show a snackbar when user tries to upload an image.
+   */
+  const snackbarHandler = () => {
+    props.enqueueSnackbar(
+      'Feature coming soon',
+      {
+        autoHideDuration: 3000,
+        preventDuplicate: true,
+        variant: 'info',
+        action: (key) => (
+          <Button onClick={() => props.closeSnackbar(key)}>got it</Button>
+        ),
+      },
+    );
+  };
+
+  const toggleMenuHandler = (event, showSnackbar = false) => {
     setAnchorEl(event ? event.currentTarget : null);
+
+    if (showSnackbar) {
+      snackbarHandler();
+    }
   };
 
   return (
@@ -34,7 +57,7 @@ const PostSubheader = (props) => {
       {menuItems && (
         <DropdownMenu
           anchorEl={anchorEl}
-          handleClose={toggleMenuHandler}
+          handleClose={(e) => toggleMenuHandler(e, true)}
           menuItems={menuItems}
           getContentAnchorEl={null}
           anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
@@ -45,4 +68,4 @@ const PostSubheader = (props) => {
   );
 };
 
-export default PostSubheader;
+export default withSnackbar(PostSubheader);
